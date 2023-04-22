@@ -3,6 +3,7 @@
 {
   # https://devenv.sh/basics/
   env.GREET = "devenv";
+  env.DB_USER = "yuanw";
 
   # https://devenv.sh/packages/
   # packages = [ pkgs.git ];
