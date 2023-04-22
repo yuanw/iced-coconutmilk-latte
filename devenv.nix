@@ -5,18 +5,17 @@
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  # packages = [ pkgs.git ];
 
   # https://devenv.sh/scripts/
   scripts.hello.exec = "echo hello from $GREET";
 
   enterShell = ''
     hello
-    git --version
   '';
 
   # https://devenv.sh/languages/
-  # languages.nix.enable = true;
+  languages.java.enable = true;
 
   # https://devenv.sh/pre-commit-hooks/
   # pre-commit.hooks.shellcheck.enable = true;
