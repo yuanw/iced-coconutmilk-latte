@@ -1,5 +1,5 @@
 DELETE
-FROM books;
+FROM book;
 
-INSERT INTO books (title, description)
+INSERT INTO book (title, description)
 VALUES ('R2dbc Revealed ', 'Asynchronous API to connect RDBMS');

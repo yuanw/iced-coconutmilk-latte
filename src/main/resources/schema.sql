@@ -1,5 +1,5 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-CREATE TABLE IF NOT EXISTS books
+CREATE TABLE IF NOT EXISTS book
 (
     id          UUID DEFAULT uuid_generate_v4(),
     isbn        VARCHAR(255),
