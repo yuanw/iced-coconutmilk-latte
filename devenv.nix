@@ -16,10 +16,11 @@
 
   # https://devenv.sh/languages/
   languages.java.enable = true;
+  languages.java.gradle.enable = true;
 
   # https://devenv.sh/pre-commit-hooks/
   # pre-commit.hooks.shellcheck.enable = true;
-
+  services.postgres.enable = true;
   # https://devenv.sh/processes/
   # processes.ping.exec = "ping example.com";
 
