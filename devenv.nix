@@ -21,6 +21,10 @@
   # https://devenv.sh/pre-commit-hooks/
   # pre-commit.hooks.shellcheck.enable = true;
   services.postgres.enable = true;
+  services.postgres.listen_addresses = "127.0.0.1";
+  services.postgres.initialDatabases = [{
+    name = "demo";
+  }];
   # https://devenv.sh/processes/
   # processes.ping.exec = "ping example.com";
 
