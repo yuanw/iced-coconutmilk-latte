@@ -9,10 +9,11 @@
   # packages = [ pkgs.git ];
 
   # https://devenv.sh/scripts/
-  scripts.hello.exec = "echo hello from $GREET";
+  scripts.compile.exec = "gradle compileJava";
+  scripts.format.exec = "gradle spotlessApply";
+  scripts.run.exec = "gradle spotlessApply";
 
   enterShell = ''
-    hello
   '';
 
   # https://devenv.sh/languages/
