@@ -50,6 +50,7 @@ public class ClearbitService implements PersonService {
         .headers(headers -> headers.setBearerAuth(apiKey))
         .accept(MediaType.APPLICATION_JSON)
         .retrieve()
+        // basic error handling, didn't test around rate limited
         .onStatus(sc -> sc.value() == 404, resp -> Mono.error(new NotFoundException()))
         .onStatus(sc -> sc.value() == 422, resp -> Mono.error(new UnprocessableException()))
         .onStatus(HttpStatusCode::is5xxServerError, resp -> Mono.error(new ServerException()))

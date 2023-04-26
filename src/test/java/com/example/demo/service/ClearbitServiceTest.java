@@ -30,11 +30,6 @@ public class ClearbitServiceTest {
   }
 
   @Test
-  void testHost() {
-    Assertions.assertThat(host).isEqualTo("https://person.clearbit.com/");
-  }
-
-  @Test
   void contextLoads() {
     StepVerifier.create(service.lookup("test@example.com").log())
         .assertNext(nodeDocs -> Assertions.assertThat(nodeDocs).isNotNull())

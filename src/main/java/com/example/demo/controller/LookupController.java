@@ -24,6 +24,7 @@ public class LookupController {
       new ParameterizedTypeReference<List<String>>() {};
 
   public Mono<ServerResponse> lookup(ServerRequest req) {
+    // probably should add some email validation, regex or not
     String email = req.queryParam("email").get();
     return lookService
         .lookup(email)

@@ -11,7 +11,7 @@
   # https://devenv.sh/scripts/
   scripts.compile.exec = "gradle compileJava";
   scripts.format.exec = "gradle spotlessApply";
-  scripts.run.exec = "gradle spotlessApply";
+  scripts.run.exec = "gradle bootRun";
 
   enterShell = ''
   '';
